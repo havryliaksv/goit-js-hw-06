@@ -16,7 +16,7 @@ const makeMarkupIngredientCard = (ingredient) => {
 
 const addMarkupIngredientList = (ingredientsListSelector, ingredientsArray) => {
   const listIngredientsRef = document.querySelector(ingredientsListSelector);
-  return listIngredientsRef
+  listIngredientsRef
     ? listIngredientsRef.append(...ingredientsArray)
     : console.log(`Element "${ingredientsListSelector}" not found`);
 };
