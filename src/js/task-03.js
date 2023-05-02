@@ -31,6 +31,6 @@ const addMarkupImagesToList = (listRefSelector, markupRow) => {
     : console.log(`Element "${listRefSelector}" not found!!!`);
 };
 
-const makeImagesListMarkup = images.map(makeImageListRefMarkup).join("");
+const makeImagesListMarkupRow = images.map(makeImageListRefMarkup).join("");
 
-addMarkupImagesToList(".gallery", makeImagesListMarkup);
+addMarkupImagesToList(".gallery", makeImagesListMarkupRow);
