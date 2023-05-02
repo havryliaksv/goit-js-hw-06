@@ -24,8 +24,13 @@ const makeImageListRefMarkup = ({ url, alt }) => {
   `;
 };
 
+const addMarkupImagesToList = (listRefSelector, markupRow) => {
+  const listRef = document.querySelector(listRefSelector);
+  listRef
+    ? listRef.insertAdjacentHTML("afterbegin", markupRow)
+    : console.log(`Element "${listRefSelector}" not found!!!`);
+};
+
 const makeImagesListMarkup = images.map(makeImageListRefMarkup).join("");
 
-const ulRef = document.querySelector(".gallery");
-
-ulRef.insertAdjacentHTML("afterbegin", makeImagesListMarkup);
+addMarkupImagesToList(".gallery", makeImagesListMarkup);
