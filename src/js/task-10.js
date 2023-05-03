@@ -21,7 +21,7 @@ function createBoxes(amount) {
     height += 10;
   }
   refs.divBoxes.innerHTML = rowMarkup;
-  console.log(`Insert ${amount} elements into "#boxes"`);
+  console.log(`Inserted ${amount} elements into "#boxes"`);
 }
 
 refs.btnCreate.addEventListener("click", onClickBtnCreate);
@@ -34,7 +34,7 @@ function onClickBtnCreate() {
 refs.btnDestroy.addEventListener("click", onClickBtnDestroy);
 
 function onClickBtnDestroy() {
-  const delBoxes = refs.divBoxes.children.length;
-  console.log(`Removed ${delBoxes} elements from "#boxes"`);
+  const countRemoveBoxes = refs.divBoxes.children.length;
+  console.log(`Removed ${countRemoveBoxes} elements from "#boxes"`);
   refs.divBoxes.innerHTML = "";
 }
