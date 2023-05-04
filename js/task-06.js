@@ -6,7 +6,7 @@ refs.input.addEventListener("blur", onBlurInput);
 
 function onBlurInput() {
   if (
-    refs.input.value.length < Number(refs.input.getAttribute("data-length"))
+    refs.input.value.length !== Number(refs.input.getAttribute("data-length"))
   ) {
     if (!refs.input.classList.contains("invalid")) {
       refs.input.classList.add("invalid");
