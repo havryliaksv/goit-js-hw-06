@@ -8,10 +8,18 @@ function onBlurInput() {
   if (
     refs.input.value.length < Number(refs.input.getAttribute("data-length"))
   ) {
-    refs.input.classList.add("invalid");
-    refs.input.classList.remove("valid");
+    if (!refs.input.classList.contains("invalid")) {
+      refs.input.classList.add("invalid");
+    }
+    if (refs.input.classList.contains("valid")) {
+      refs.input.classList.remove("valid");
+    }
   } else {
-    refs.input.classList.add("valid");
-    refs.input.classList.remove("invalid");
+    if (!refs.input.classList.contains("valid")) {
+      refs.input.classList.add("valid");
+    }
+    if (refs.input.classList.contains("invalid")) {
+      refs.input.classList.remove("invalid");
+    }
   }
 }
