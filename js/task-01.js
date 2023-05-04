@@ -9,8 +9,10 @@ const getDescriptionListCategories = () => {
   const listCategories = document.querySelector("#categories").children;
 
   [...listCategories].forEach((item) => {
-    console.log(`Category: ${item.querySelector("h2").textContent}`);
-    console.log(`Elements: ${item.querySelector("ul").children.length}`);
+    console.log(`Category: ${item.firstElementChild.textContent}`);
+    console.log(`Elements: ${item.lastElementChild.children.length}`);
   });
 };
 getDescriptionListCategories();
+
+console.log(document.body.lastElementChild);
