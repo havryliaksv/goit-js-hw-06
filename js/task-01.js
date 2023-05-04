@@ -14,5 +14,3 @@ const getDescriptionListCategories = () => {
   });
 };
 getDescriptionListCategories();
-
-console.log(document.body.lastElementChild);
