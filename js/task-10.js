@@ -24,6 +24,12 @@ function createBoxes(amount) {
   console.log(`Inserted ${amount} elements into "#boxes"`);
 }
 
+function destroyBoxes() {
+  const countRemoveBoxes = refs.divBoxes.children.length;
+  console.log(`Removed ${countRemoveBoxes} elements from "#boxes"`);
+  refs.divBoxes.innerHTML = "";
+}
+
 refs.btnCreate.addEventListener("click", onClickBtnCreate);
 
 function onClickBtnCreate() {
@@ -34,7 +40,7 @@ function onClickBtnCreate() {
 refs.btnDestroy.addEventListener("click", onClickBtnDestroy);
 
 function onClickBtnDestroy() {
-  const countRemoveBoxes = refs.divBoxes.children.length;
-  console.log(`Removed ${countRemoveBoxes} elements from "#boxes"`);
-  refs.divBoxes.innerHTML = "";
+  if (refs.divBoxes.children.length > 0) {
+    destroyBoxes();
+  }
 }
